@@ -1,3 +1,4 @@
+//1
 function zodiac(year) {
     let zodiac = ['monkey','rooster','dog','pig','rat','ox','tiger','rabbit','dragon','snake','horses','sheep']
     let date = new Date;

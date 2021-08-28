@@ -1,3 +1,4 @@
+//4
 function select(x) { //function ชื่อ select รับค่า x
     string = "Hello World"; //กำหนด string 
     const vowels = ["a", "e", "i", "o", "u"]; //กำหนด vowels เป็น array ใช้ const เพราะกำหนดค่าเป็น final กำหนดค่าไปแล้วไม่สามารถเปลี่ยนแปลงค่าได้
@@ -38,5 +39,97 @@ function select(x) { //function ชื่อ select รับค่า x
     }
   }
    
-  
-  
+/*************************/  
+let myString = 'Hello world';
+
+function Reverse(){
+    let result = ''; // string pen array
+    for(i = 0; i <= myString.length; i++){ //ใช้ <= เพราะจะได้นับตัวสุดท้ายพอดี
+        result += myString.charAt(myString.length - i) //charAt = properti แสดงผลที่เรากำหนด
+    }
+    console.log(result);
+}
+
+Reverse(myString);
+
+function Replace(myString){
+    let result = '';
+    for(i = 1; i <= myString.length; i++){ //ใช้ < เพราะ <= จะไปนับ index ที่ 11 ซึ่งมันไม่มี แต่ๆๆถ้า i = 1 จะใช้ <= ได้
+        if(myString[i] == 'E'||myString[i] == 'e'){
+            result += '*';
+        } else if(myString[i] == 'O'||myString[i] == 'o'){
+            result += '*';
+        }
+        else {
+            result += myString[i];
+        }
+    }
+    console.log(result);
+}
+
+Replace(myString);
+
+function Replace2(myString){
+    let result = '';
+    for(i = 0; i < myString.length; i++){
+        switch(myString[i]){
+            case 'O':
+                result += '*';
+                break;
+            case 'o':
+                result += '*';
+                break;
+            case 'E':
+                result += '*';
+                break;
+            case 'e' :
+                result += '*';
+                break;
+            default:
+                result += myString[i];
+                break;
+        }
+    }
+    console.log(result);
+}
+
+Replace2(myString);
+
+function CountVowel(myString){
+    let result = 0;
+    for(i = 0; i < myString.length; i++){
+        switch(myString[i]){
+            case 'O':
+                result++;
+                break;
+            case 'o':
+                result++;
+                break;
+            case 'E':
+                result++;
+                break;
+            case 'e' :
+                result++;
+                break;
+            default:
+                break;
+        }
+    }
+    console.log(result);
+} 
+CountVowel(myString);
+
+function menu(num , myString){
+    switch(num){
+        case 1:
+            Reverse(myString);
+            break;
+        case 2:
+            Replace(myString);
+            break;    
+         case 3:
+            CountVowel(myString);
+            break;    
+    }
+}
+menu(1,myString);
