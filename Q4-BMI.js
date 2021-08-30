@@ -1,4 +1,4 @@
-function BMI(name, weight, height) {
+/*function BMI(name, weight, height) {
     const pounds = 0.453592;
     const inch = 0.0254;
 
@@ -26,4 +26,12 @@ BMI("Mint", 112.44, 64.9);
 BMI("Kim", 112.44, 68.5);
 BMI("Paint", 143.3, 72.8);
 BMI("Zim", 112.44, 65.3);
-BMI("Pam", 110.23, 61.8);
+BMI("Pam", 110.23, 61.8);*/
+
+/***********************/
+
+function bmi(name, weight, height){
+    const pounds;
+    const inch;
+    let processBmi = (weight*pounds)/Math.pow(height*inch,2);
+}
