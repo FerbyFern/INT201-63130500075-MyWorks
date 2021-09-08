@@ -1,3 +1,21 @@
+value=0 //var scope
+for(i=0;i<10;i++){
+
+}
+myVariable //camel case
+myMethod
+myFunction
+myObject
+
+const CM_TO_METER = 0.2554
+const constObject
+function doSometing() {
+    //console.log(someValue);
+    return someValue;
+}
+doSometing() + "xxx";
+console.log(doSometing());
+
 const student={id:1, name:"Somchai"}
 
 for(let prop in student){
