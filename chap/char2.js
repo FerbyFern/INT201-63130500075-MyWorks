@@ -49,8 +49,70 @@ y = 101                 //เปลี่ยนเป็นจำนวนเต
 var d = "JavaScript"
 var s = 'avaScript'
 var b = `JavaScript`
-
+//ห้ามแยกไว้คนละบรรทัด
 /* var text1 = "Lorem Ipsum is simply dummy text of the printing
                 and typesetting industry"              //error
-   var text1 = 'Lorem Ipsum is simply dummy text of the printing
+   var text2 = 'Lorem Ipsum is simply dummy text of the printing
                 and typesetting industry'              //error   */
+//ใสเครื่องหมาย \
+var text1 = "Lorem Ipsum is simply dummy text of the printing \
+             and typesetting industry"                          //OK
+var text2 = 'Lorem Ipsum is simply dummy text of the printing \
+             and typesetting industry'                          //OK
+//แยกเป็น String ย่อยๆ นำมาต่อกันด้วยเครื่องหมาย +
+var text1 = "Lorem Ipsum is simply dummy text of the printing" +
+             "and typesetting industry"                          //OK
+var text2 = 'Lorem Ipsum is simply dummy text of the printing' +
+             'and typesetting industry'                          //OK
+//เปลี่ยนเป็นเครื่องหมาย ` `
+let lorem = `Lorem Ipsum is simply dummy text of the printing 
+            and typesetting industry`
+
+//ข้อมูลชนิด Boolean
+var a = true        //a มีค่าเป็นจริง
+let b = false       //b มีค่าเป็นเท็จ
+// var c = True        //error เขียนในรูปแบบตัวพิมพ์
+// var d = FALSE       //error ...
+// let e = "true"      //e เป็นข้อมูลชนิด string ไม่ใช่ boolean
+
+//ค่าคงที่ (Constant)
+const ชื่อค่าคงที่ = ค่าที่กำหนด
+
+const PI = 3.141
+// PI = 3.14        //erroe ค่าคงที่แก้ไขไม่ได้
+
+const APP_VERSION
+APP_VERSION = 8     //error ต้องกำหนดค่าตั้งแต่ประกาศตัวแปร
+
+const LATITUDE = 50.12345       //OK
+const LONGTITUDE = 80.67890     //OK
+var LATITUDE = 60.6666          //error นำค่าคงที่มาเปลี่ยนเป็นตัวแปรไม่ได้
+let LONGTITUDE = 85.5555        //error
+
+var language = "JavaScript"
+const language = "ECMAScript"   //error นำตัวแปรมาเปลี่ยนเป็นค่าคงที่ไม่ได้
+
+//การตรวงสอบชนิดข้อมูล
+var a = 123
+var b = 4.56
+var c = "hello"
+var d = false
+var e
+console.log(typeof a)           //number
+console.log(typeof d)           //number
+console.log(typeof c)           //string
+console.log(typeof d)           //boolean
+console.log(typeof e)           //undefined
+console.log(typeof console)     //object
+console.log(typeof console.log) //function
+console.log(typeof null)        //object
+console.log(typeof x)           //undefined ยังไม่ได้ประกาศตัวแปร
+
+//Operator สำหรับการกำหนดค่า (Assignment Operator -> =)
+var x = 12345
+let y = 6.789
+const TITLE = 'JavaScript & Node.js'
+//Chaining Assignment กำหนดค่าจากขวาไปซ้าย
+var x, y, z
+x = y = z = 10      //z = 10, y = 10, x = 10
+
