@@ -12,6 +12,7 @@ let b
 // var a   //error
 // var b   //error
 
+/*******************************/
 //กำหนดค่าตัวแปร
 var text              //ประกาศตัวแปรชื่อ text
 text = ค่าที่กำหนด      //กำหนดค่าให้กับตัวแปร text
@@ -28,6 +29,7 @@ var number = ค่าที่1
 number = ค่าที่2         //เปลี่ยนแปลงค่าได้
 number = ค่าที่3
 
+/*******************************/
 //ข้อมูลชนิด number
 var x = 123             //เลขจำนวนเต็ม
 var y = -456            //ค่าติดลบ
@@ -45,6 +47,7 @@ x = 4.56                //เปลี่ยนเป็นเลขทศนิ
 var y = 7.11            //เดิมเป็นเลขทศนิยม
 y = 101                 //เปลี่ยนเป็นจำนวนเต็ม
 
+/*******************************/
 //ข้อมูลชนิด String
 var d = "JavaScript"
 var s = 'avaScript'
@@ -68,6 +71,7 @@ var text2 = 'Lorem Ipsum is simply dummy text of the printing' +
 let lorem = `Lorem Ipsum is simply dummy text of the printing 
             and typesetting industry`
 
+/*******************************/
 //ข้อมูลชนิด Boolean
 var a = true        //a มีค่าเป็นจริง
 let b = false       //b มีค่าเป็นเท็จ
@@ -75,6 +79,7 @@ let b = false       //b มีค่าเป็นเท็จ
 // var d = FALSE       //error ...
 // let e = "true"      //e เป็นข้อมูลชนิด string ไม่ใช่ boolean
 
+/*******************************/
 //ค่าคงที่ (Constant)
 const ชื่อค่าคงที่ = ค่าที่กำหนด
 
@@ -92,6 +97,7 @@ let LONGTITUDE = 85.5555        //error
 var language = "JavaScript"
 const language = "ECMAScript"   //error นำตัวแปรมาเปลี่ยนเป็นค่าคงที่ไม่ได้
 
+/*******************************/
 //การตรวงสอบชนิดข้อมูล
 var a = 123
 var b = 4.56
@@ -108,6 +114,7 @@ console.log(typeof console.log) //function
 console.log(typeof null)        //object
 console.log(typeof x)           //undefined ยังไม่ได้ประกาศตัวแปร
 
+/*******************************/
 //Operator สำหรับการกำหนดค่า (Assignment Operator -> =)
 var x = 12345
 let y = 6.789
@@ -115,4 +122,82 @@ const TITLE = 'JavaScript & Node.js'
 //Chaining Assignment กำหนดค่าจากขวาไปซ้าย
 var x, y, z
 x = y = z = 10      //z = 10, y = 10, x = 10
+
+/*******************************/
+//Arithmetic Operator
+//Division /
+var a = 10/2    //5
+var b = 100/8   //12.5
+let c = 10/2.5  //4
+
+//Remainder %
+var a = 8%3     //2
+var b = 10%5    //0
+var c = 13%4    //1
+var d = 12%3.5  //1.5
+
+//Exponentiation ** = Math.pow()
+var radius = 10                         //10
+var circleArea = 3.14 * (radius ** 2)   //314
+let sqrt100 = 100 ** 0.5                //10
+console.log(radius, circleArea, sqrt100)
+
+let a = "100" * "10"    //1000
+let b = 10 - '2'        //8
+let c = "100" / '25'    //4
+let d = 108 + '1009'    //1081009 เป็นการเชื่อมต่อตัวเลขกับ string
+console.log(a, b, c, d)
+
+/*******************************/
+//Compound Operator
+var x = 5
+x += 1      //6
+
+var y = 4.5
+y += 0.5    //5.0
+
+var a = 20
+a -= 15     //5
+
+var b =5
+b *= 2      //10
+
+let c = 100
+c /= 20     //5
+
+let d = 13
+d %= 6      //1
+
+let e = 10
+e **= 3     //1000
+
+/*******************************/
+//Increment & Decrement Operator
+// (++ , +=) = +1
+var a = 10
+a++         //a = 11
+var b = 10.75
+++b         //b = 11.75
+let c = 999
+let d = ++c //d = 1000
+
+// (-- , -=) = -1
+var a = 10
+a--         //a = 9
+var b = 10.75
+--b         //b = 9.75
+let c = 999
+let d = --c //d = 998
+
+var x = 10
+x++     //x = 11
+x--     //x = 10
+let y = 10
+++y     //y = 11
+--y     //y = 10
+
+x = 10
+y = 2 + (++x)   //y = 13
+x = 10
+y = 2 + (x++)   //y = 12
 
