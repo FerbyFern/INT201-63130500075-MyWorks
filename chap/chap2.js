@@ -201,3 +201,34 @@ y = 2 + (++x)   //y = 13
 x = 10
 y = 2 + (x++)   //y = 12
 
+/*******************************/
+//prompt
+let prompt = require('prompt-sync')()
+let a = prompt('จำนวนที่ 1 >> ')
+let b = prompt('จำนวนที่ 2 >> ')
+a = parseFloat(a)
+b = parseFloat(b)
+console.log(`ผลบวกคือ: ${a + b}`)
+
+//test-prompt
+//npm install prompt-sync
+
+const ps = require('prompt-sync')
+let prompt = ps()
+
+let prompt = require('prompt-sync')()
+let name = prompt('What is your name?: ')
+console.log(`Hi there ${name}`)
+
+//test
+var radius = 10
+var circleArea = 3.14 * (radius ** 2)
+let sqrt100 = 100 ** 0.5
+
+console.log(circleArea, sqrt100)
+
+//variable
+let c = ('hahaha' * 5)
+let d = false || 5	
+
+console.log(d)
