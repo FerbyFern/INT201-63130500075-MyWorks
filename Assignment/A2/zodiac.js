@@ -1,3 +1,6 @@
+/*แบบฝึกหัด 1 
+เขียนโปรแกรมเพื่อแสดงราศีที่ตรงกับปีที่กำหนดไว้ โดยมีทั้งหมด 12 ราศีซึ่งแทนโดยสัตว์ประเภทต่าง ๆ ตัวอย่างเช่น ปี 1900 %12 จะมีค่า 4 ซึ่งจะแทนด้วยราศีหนู
+0: monkey 1: rooster 2: dog 3: pig 4: rat 5: ox 6: tiger 7: rabbit 8: dragon 9: snake 10: horse 11: sheep */
 //1
 function zodiac(year) {
     let zodiac = ['monkey','rooster','dog','pig','rat','ox','tiger','rabbit','dragon','snake','horses','sheep']
