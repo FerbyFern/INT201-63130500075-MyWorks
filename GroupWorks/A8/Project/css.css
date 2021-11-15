@@ -1,10 +1,11 @@
 :root{
     --primary-color: white;
+    --bg-color: white;
     --font-color: black;
     --nav-color : #343a40;
     --i-color: white;
   }
-  .dark-theme{
+  .dark-mode{
     --primary-color: #303030;
     --bg-color : black;
     --font-color: white;

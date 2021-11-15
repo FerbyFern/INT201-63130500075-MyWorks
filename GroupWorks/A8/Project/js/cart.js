@@ -16,10 +16,11 @@ export let cart = {
       cart.items.push({ product, numberOfUnits: 1 });
       alert(` " ${id} " added in your cart`);
       console.log(cart.items);
-      cart.saveCart();
+     cart.saveCart();
     }
     cart.countInCart();
-    localStorage.setItem("InCarts", cart.countInCart());
+     localStorage.setItem("InCarts", cart.countInCart());
+  
   },
   emptyCart: function () {
     let cartEmpty = [];
@@ -52,10 +53,10 @@ export let cart = {
       console.log(cart.items.length);
     }
   },
-  saveCart: function () {
+  saveCart: function () { //function ในการจดจำข้อมูลสินค้าที่เพิ่มเข้าไปโดยใช้ local storage
     localStorage.setItem("shoppingCart", JSON.stringify(cart.items));
   },
-  loadCart: function () {
+  loadCart: function () { //function ในการ load ตะกร้าสินค้าที่ผู้ใช้เคยเพิ่มไป เมื่อเปิดใหม่ข้อมูลจะยังคงอยู่
     let cartLoad = localStorage.getItem("shoppingCart");
     let Incart = localStorage.getItem("InCarts");
     cart.items = cartLoad ? JSON.parse(cartLoad) : [];
@@ -76,4 +77,6 @@ lookProductInCart.addEventListener("click", () => {
   cart.showCart();
 });
 
-cart.loadCart();
+document.addEventListener('DOMContentLoaded', () => {
+  cart.loadCart();
+})

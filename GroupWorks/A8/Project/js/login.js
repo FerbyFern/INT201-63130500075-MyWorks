@@ -11,13 +11,17 @@ let login = {
         } else {
           $('#loginModal').modal('hide');
           CookieUtil.setCookie("Username", user_input, 30);
+          console.log(user_input);
         }
     },
     loadMember : function(){
         let loadUser = CookieUtil.getCookie("Username");
-        userText.textContent = `Welcome ${loadUser}`;
-        logoutText.style.display = "";
-        loginBox.style.display = "none";
+        if(loadUser){
+          userText.textContent = `Welcome ${loadUser}`;
+          logoutText.style.display = "";
+          loginBox.style.display = "none";
+        }
+      
     }
 }
 
@@ -45,4 +49,6 @@ logout.addEventListener("click", () => {
 });
 
 
-window.onload = login.loadMember;
+document.addEventListener('DOMContentLoaded', () => {
+  login.loadMember();
+})
