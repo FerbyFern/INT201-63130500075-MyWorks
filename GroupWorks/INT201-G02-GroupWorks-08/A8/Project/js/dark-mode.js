@@ -1,4 +1,3 @@
-
 let darkMode = localStorage.getItem('darkMode');
 let darkModeToggle= document.getElementById("darkMode");
 
