@@ -1,0 +1,35 @@
+:root{
+    --primary-color: white;
+    --bg-color: white;
+    --font-color: black;
+    --nav-color : #343a40;
+    --i-color: white;
+  }
+  .dark-mode{
+    --primary-color: #303030;
+    --bg-color : black;
+    --font-color: white;
+    --nav-color : black;
+  }
+  nav{
+    background-color: var(--nav-color); 
+    color: var(--font-color);
+  }
+  span{
+    color: var(--i-color);
+  }
+  i{
+    color: var(--i-color);
+  }
+  body{
+    background-color: var(--primary-color);
+  }
+  p{
+    color: var(--font-color);
+  }
+  h2{
+    color: var(--font-color);
+  }
+  .card{
+    background-color: var(--bg-color);
+  }

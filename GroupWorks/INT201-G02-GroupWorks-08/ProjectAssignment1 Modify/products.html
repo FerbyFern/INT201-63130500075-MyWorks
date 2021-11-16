@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--ใช้ framework bootstrap ในการจัด css-->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+    <!--font-->
+    <link rel="stylesheet" href="./css.css">
+    <title>Game Store</title>
+    
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-md navbar-dark"
+    >
+      <div class="navbar-collapse">
+        <div id="search-container">
+          <div id="search-element" class="m-5 d-flex">
+            <!--ปุ่มแว่นขยาย-->
+            <div id="search-box" class="p-2">
+              <button
+                id="button-search"
+                type="button"
+                class="btn btn-primary ml-2"
+              >
+                <i class="fa fa-search"></i>
+                <!--รูปแว่นขยาย-->
+              </button>
+            </div>
+
+            <!--input and submit-->
+            <div id="search-bar" class="ml-2 p-2" style="display: none">
+              <input
+                id="search"                type="text"
+                class="form-control"
+                placeholder="Search..."
+              />
+              <button
+                id="button-submit"
+                type="button"
+                class="btn btn-primary ml-2"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+     
+      <!--in cart-->
+      <div class="m-5">
+        <button id="login-box" style="display: flex;" type="button" class = "btn btn-primary" data-target="#loginModal" data-toggle="modal">Login</button> <span id = "user-text"></span> <span id = "logout-text" style="display : none; color: red; cursor: pointer">logout</span>
+      </div>
+
+      <div id="in-cart" class="mr-5">
+        <i id="cart-icon" class="fa fa-shopping-cart mr-2" style="font-size: 24px; cursor: pointer"></i>
+        <span> Your Cart : <span id="numCart"> 0 </span></span>
+        <i
+          id="button-trash"
+          class="fa fa-trash-o ml-2"
+          style="font-size: 24px; cursor: pointer"
+        ></i>
+        
+        <i id = "darkMode"
+          class = "fa fa-moon-o ml-5"
+          style="font-size: 24px; cursor: pointer;"></i>
+        
+      </div>
+
+      
+      
+    </nav>
+
+    
+    <div class="modal" role="dialog" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Login</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <input id = "user" type = "text" class="form-control " placeholder="Username">
+            </div>
+          </div>
+            <div class="modal-footer">
+              <button id="button-login" class="btn btn-primary mt-2 btn-block">Login</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+    <div id="product-container">
+      <h2>Product List</h2>
+    </div>
+
+    <div id="products">
+      <!-- แสดง product ตรงนี้โดยใช้ dom -->
+    </div>
+
+
+    <script src="js/main.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
