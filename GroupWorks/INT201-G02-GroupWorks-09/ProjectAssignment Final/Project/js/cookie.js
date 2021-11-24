@@ -19,5 +19,4 @@ export class CookieUtil {
   static deleteCookie(name) {
     document.cookie = name + "=; Max-Age=0;";
   }
-  }
-
+}
