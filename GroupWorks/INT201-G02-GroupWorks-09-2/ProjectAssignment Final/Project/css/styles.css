@@ -1,0 +1,67 @@
+:root{
+    --primary-color: #f4f5f6;
+    --card-color: #fff;
+    --font-color: black;
+    --nav-color : #343a40;
+    --i-color: white;
+  }
+  
+.dark-mode{
+  --primary-color: #363d44;
+  --card-color : #1b1f22;
+  --font-color: white;
+  --nav-color : #1b1f22;
+}
+nav{
+  background-color: var(--nav-color); 
+  color: var(--font-color);
+}
+span{
+  color: var(--i-color);
+}
+i{
+  color: var(--i-color);
+}
+body{
+  background-color: var(--primary-color);
+}
+p{
+  color: var(--font-color);
+}
+h2{
+  color: var(--font-color);
+}
+
+.card{
+    background-color: var(--card-color);
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    }
+
+.card .read-more:hover{
+    font-size: 14px;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    
+}
+
+/* gameStore */
+#gameStore{
+  position: relative;
+  animation: mymove 1.4s infinite,mymove2 1.4s infinite;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: -140px;}
+}
+@keyframes mymove2 {
+  from {right: -140px;}
+  to {left: 0px;}
+}
+
+
+

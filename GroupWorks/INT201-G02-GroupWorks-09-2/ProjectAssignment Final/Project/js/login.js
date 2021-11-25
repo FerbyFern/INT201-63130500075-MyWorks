@@ -6,17 +6,15 @@ const loginBox = document.getElementById("login-box");
 const logoutBox = document.getElementById("logout-box");
 const userLoginButton = document.getElementById("button-login");
 
-
 export let login = {
     saveMember : function() {
-        CookieUtil.setCookie("Username", user_input.value, 30);
+        CookieUtil.setCookie("Username", user_input.value, 30); //setCookie จาก input ที่ user กรอกเข้ามา
         console.log(user_input.value);
     },
     loadMember : function(){
         let loadUser = CookieUtil.getCookie("Username");
         if(loadUser){
-          userText.textContent = `Welcome: ${loadUser}`;
-         // logoutText.innerHTML=``
+         userText.textContent = `Welcome: ${loadUser}`;
          loginBox.style.display = "none"; 
          logoutBox.style.display = "flex";
         }else{
@@ -31,7 +29,7 @@ userLoginButton.addEventListener("click", () => { //ปุ่ม login
   } else {
   login.saveMember(); //เรียก savemember เพื่อเก็บ cookie ของ username
   login.loadMember();
-  location.reload(); //refresh หน้าเพจ
+  //location.reload(); //refresh หน้า page
   alert(`Welcome ${user_input.value}`); //แต่ถ้าใส่ให้ขึ้น alert "Welcome ตามด้วยข้อมูลที่ user ใส่มา"
   } 
 });
@@ -44,7 +42,4 @@ logoutBox.addEventListener("click", () => { //ปุ่ม logout
   location.reload();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  login.loadMember();
-})
-
+login.loadMember();
