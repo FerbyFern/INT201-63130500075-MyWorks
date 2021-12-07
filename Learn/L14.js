@@ -6,6 +6,22 @@
 console.log(`hello`);
 //setTimeout=asynchronous function
 let num = 0;
+setTimeout(() => {
+  console.log(`world, `);
+  num = 10;
+}, 5000);
+console.log(`Good bye: ${num}`);
+
+/******************************************* */
+
+//1. synchronous task
+// console.log(`hello`);
+// console.log(`world, `);
+// console.log(`Good bye`);
+//2. asynchronous task
+console.log(`hello`);
+//setTimeout=asynchronous function
+let num = 0;
 async function delay() {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -21,7 +37,7 @@ async function getNum() {
 }
 getNum();
 
-
+/******************************************* */
 
 const friends = [
     { fullname: 'Paul lee', address: 'Bangkok, Thailand' },
@@ -41,19 +57,21 @@ const friends = [
   //getFullName is a callback function
   getFriendName('Paul', 'lee', getFullName);
 
-
+/******************************************* */
 
 //1. using promist.then() method
 getFriendName('Paul', 'lee', getFullName)
-.then((myFriendName) => {
-  console.log(myFriendName);
-  return myFriendName;
-})
-.then((friendFullName) => {
-  console.log(friendFullName);
-  getAddress(friendFullName).then((friendAddr) => console.log(friendAddr));
-})
-.catch((err) => console.log(err));
+  .then((myFriendName) => {
+    console.log(myFriendName);
+    return myFriendName;
+  })
+  .then((friendFullName) => {
+    console.log(friendFullName);
+    getAddress(friendFullName).then((friendAddr) => console.log(friendAddr));
+  })
+  .catch((err) => console.log(err));
+
+/******************************************* */
 
 function getAddress(fullname) {
     return new Promise((resolve, reject) => {
@@ -63,10 +81,12 @@ function getAddress(fullname) {
     });
 }
 
+/*******************************************/
+
 function getFriendName(name, surname, callbackFn) {
-  return new Promise((resolve, reject) => {
-    const fullname = callbackFn(name, surname);
-    if (fullname === undefined) reject(new Error('cannot get full name!'));
-    resolve(fullname);
-  });
+    return new Promise((resolve, reject) => {
+      const fullname = callbackFn(name, surname);
+      if (fullname === undefined) reject(new Error('cannot get full name!'));
+      resolve(fullname);
+    });
 }
